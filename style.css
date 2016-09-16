@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800";
 @import "https://fonts.googleapis.com/css?family=Montserrat:400,700";
+@import "https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,500,600,700";
 body {
   background: #eeeeee;
   font-family: "Open Sans", sans-serif;
@@ -33,9 +34,9 @@ ul {
 }
 
 h1, h2, .title {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 47px;
-  font-weight: normal;
+  font-weight: 600;
   line-height: 65px;
   margin-bottom: 35px;
   text-decoration: underline;
@@ -56,7 +57,7 @@ h1:after, h2:after, .title:after {
 }
 
 h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 28px;
   font-weight: normal;
   margin-bottom: 25px;
@@ -69,14 +70,14 @@ h3 span {
 }
 
 h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 24px;
   font-weight: normal;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 h5 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 15px;
   font-weight: normal;
   text-transform: uppercase;
@@ -87,7 +88,7 @@ h5 {
 
 h6 {
   font-size: 14px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 2;
@@ -300,26 +301,149 @@ img {
 .main-container .home-services .home-services-content .row .services-box {
   padding: 0 30px;
 }
-.main-container .featured-contaner {
-  min-height: 540px;
+.main-container .featured {
+  position: relative;
+}
+.main-container .featured:after {
+  background: #ffffff;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 1190px;
+}
+.main-container .featured .featured-contaner {
+  min-height: 520px;
   justify-content: left;
 }
-.main-container .featured-contaner .featured-content {
+.main-container .featured .featured-contaner .featured-content {
   margin-left: -230px;
   margin-right: -100px;
 }
-.main-container .content-slider .owl-item.center .content-box {
-  color: #000000;
+.main-container .slider-container {
+  position: relative;
+  padding: 100px 0;
 }
-.main-container .content-slider .owl-item.center .content-box h2:after {
+.main-container .slider-container:after {
+  background: #ffffff;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 1190px;
+}
+.main-container .slider-container .content-slider .owl-item.center .content-box {
+  color: #000000;
+  transform: scale(1.08);
+}
+.main-container .slider-container .content-slider .owl-item.center .content-box h2 {
+  padding-bottom: 0;
+}
+.main-container .slider-container .content-slider .owl-item.center .content-box h2:after {
   height: 0;
 }
-.main-container .content-slider .content-box {
+.main-container .slider-container .content-slider .content-box {
   text-align: center;
   color: #ffffff;
+  transition: all 0.3s ease 0s;
 }
-.main-container .content-slider .content-box h2:after {
+.main-container .slider-container .content-slider .content-box h2 {
+  padding-bottom: 0;
+}
+.main-container .slider-container .content-slider .content-box h2:after {
   height: 0;
+}
+.main-container .slider-container .slider-prev {
+  font-size: 50px;
+  left: 0;
+  margin-top: -20px;
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+  cursor: pointer;
+}
+.main-container .slider-container .slider-next {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 50px;
+  margin-top: -20px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+/***********  Common pages  ************/
+.page-wrapper .banner-image {
+  min-height: 220px;
+}
+.page-wrapper .page-title {
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: -70px;
+}
+.page-wrapper .page-content {
+  background: #ffffff;
+  padding-top: 120px;
+}
+.page-wrapper .page-content .question-answer h4 {
+  margin-bottom: 0;
+  line-height: 2;
+  cursor: pointer;
+}
+.page-wrapper .page-content .question-answer h4 .plus {
+  float: right;
+}
+.page-wrapper .page-content .question-answer h4 .plus:before {
+  content: "+";
+  font-family: "Open Sans", sans-serif;
+}
+.page-wrapper .page-content .question-answer h4 .plus.minus:before {
+  content: "-";
+}
+.page-wrapper .page-content .question-answer .answer {
+  padding: 10px 0;
+  display: none;
+}
+.page-wrapper .content-box {
+  padding: 0 40px;
+}
+.page-wrapper .featured {
+  padding: 100px 0;
+}
+.page-wrapper .home-brand {
+  padding: 130px 0 20px;
+}
+.page-wrapper .home-brand.contact-us .brand-image {
+  margin-right: -10px;
+}
+.page-wrapper .home-brand.contact-us .content-box {
+  margin-left: -100px;
+  margin-right: 0;
+  padding: 40px 75px;
+}
+.page-wrapper .contact-form .navbar-form {
+  padding: 0;
+}
+.page-wrapper .contact-form .navbar-form .form-group {
+  width: 100%;
+}
+.page-wrapper .contact-form .navbar-form .form-group .form-control {
+  width: 48.7% !important;
+  margin-bottom: 18px;
+  float: left;
+}
+.page-wrapper .contact-form .navbar-form .form-group .form-control:nth-of-type(1) {
+  margin-right: 2.6%;
+}
+.page-wrapper .contact-form .navbar-form .message textarea.form-control {
+  width: 100% !important;
+  margin-bottom: 18px;
 }
 
 /******************  Footer  ***************/

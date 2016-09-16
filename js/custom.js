@@ -5,18 +5,23 @@ var wheight,smoke;
 			$('.wheight').css({'height': wheight});
 			var hWidth = $('#header').outerWidth();
 			var offset = $('#header').offset();
-			$('.banner-width').css({'width': hWidth + offset.left - 100})
+			$('.banner-width').css({'width': hWidth + offset.left - 100});
+			
+			var sliderWidth = $('.owl-item').outerWidth();
+			console.log(sliderWidth);
+			$('.slider-margin-left').css({'marginLeft': sliderWidth/2});
+			$('.slider-margin-right').css({'marginRight': sliderWidth/2});
 		},
 		accordion: function(){
-			$('.question-answer h6').click(function(){
+			$('.question-answer h4').click(function(){
 				if($(this).parent().find('.answer').hasClass('active')){
 					$(this).parent().find('.answer').removeClass('active').slideUp(500);
-					$(this).find('.down-arrow').removeClass('up-arrow');
+					$(this).find('.plus').removeClass('minus');
 				}else{
-					$('.question-answer h6').parent().find('.answer').removeClass('active').slideUp(500);
-					$('.question-answer h6').find('.down-arrow').removeClass('up-arrow');
+					$('.question-answer h4').parent().find('.answer').removeClass('active').slideUp(500);
+					$('.question-answer h4').find('.plus').removeClass('minus');
 					$(this).parent().find('.answer').addClass('active').slideDown(500);
-					$(this).find('.down-arrow').addClass('up-arrow');
+					$(this).find('.plus').addClass('minus');
 				}
 			});
 		},feeds: function(){
@@ -64,12 +69,12 @@ var wheight,smoke;
 			 var contentSlider = $(sliderContainer).owlCarousel({
 				loop:true,
 				center:true,
-				margin: 120,
+				margin: 160,
 				URLhashListener:true,
 				autoplayHoverPause:true,
 				startPosition: 'URLHash',
-				dots: true,
-				autoplay: true,
+				dots: false,
+				autoplay: false,
 				responsive:{
 					0:{
 						items:1
@@ -105,19 +110,18 @@ var wheight,smoke;
 		if($("#instafeed").length){
 			smoke.feeds();
 		}
-		var sliderWidth = $('.content-box').outerWidth();
-			console.log(sliderWidth + 100);
-			$('.slider-margin').css({'marginLeft': sliderWidth/2})
-		
-	});
-	$(window).on("load resize",function(e){
-		smoke.sizes();
-		var sliderWidth = $('.content-box').outerWidth();
-			console.log(sliderWidth + 100);
-			$('.slider-margin').css({'marginLeft': sliderWidth/2})
 		
 		if( $('.content-slider .content-box').length > 1){
 			smoke.carousel('.content-slider');
 		}
+		
+	});
+	$(window).on("load",function(e){
+		smoke.sizes();
+		
+	});
+	$(window).resize(function(){
+		smoke.sizes();
+		
 	});
 

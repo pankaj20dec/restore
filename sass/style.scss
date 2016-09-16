@@ -1,5 +1,6 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800';
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+@import 'https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,500,600,700';
 @import "variables/variables";
 
 body{
@@ -30,9 +31,9 @@ ul{
 	list-style: none;
 }
 h1{
-	font-family: $montserrat;
+	font-family: $garamond;
 	font-size: 47px;
-	font-weight:  $font-normal;
+	font-weight:  $font-semi-bold;
 	line-height: 65px;
 	margin-bottom: 35px; 
 	text-decoration: underline;
@@ -55,7 +56,7 @@ h2{
 	@extend h1;
 }
 h3{
-	font-family: $montserrat;
+	font-family: $garamond;
 	font-size: 28px;
 	font-weight: $font-normal;
 	margin-bottom:  25px;
@@ -67,13 +68,13 @@ h3{
 	}
 }
 h4{	
-	font-family: $montserrat;
+	font-family: $garamond;
 	font-size: 24px;
 	font-weight: $font-normal;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 h5{
-	font-family: $montserrat;
+	font-family: $garamond;
 	font-size: 15px;
 	font-weight: $font-normal;
 	text-transform: uppercase;
@@ -83,7 +84,7 @@ h5{
 }
 h6{
 	font-size: 14px;
-	font-family: $montserrat;
+	font-family: $garamond;
 	font-weight: $font-bold;
 	text-transform: uppercase;
 	line-height: 2;
@@ -300,41 +301,172 @@ img{
 			}
 		}
 	}
-	.featured-contaner{
-		min-height: 540px;
-		justify-content: left;
-		.featured-content {
-			margin-left: -230px;
-			margin-right: -100px;
+	.featured{
+		position: relative;
+		&:after {
+				background: $white;
+				bottom: 0;
+				content: "";
+				height: 2px;
+				left: 0;
+				margin: 0 auto;
+				position: absolute;
+				right: 0;
+				width: 1190px;
+			}
+		.featured-contaner{
+			min-height: 520px;
+			justify-content: left;
+			.featured-content {
+				margin-left: -230px;
+				margin-right: -100px;
+			}
 		}
 	}
-	.content-slider{
-		.owl-item{
-			&.center{
-				.content-box{
-					color: $black;
-					h2{
-						&:after{
-							height: 0;
+	.slider-container{
+		position: relative;
+		padding: 100px 0;
+		&:after {
+				background: $white;
+				bottom: 0;
+				content: "";
+				height: 2px;
+				left: 0;
+				margin: 0 auto;
+				position: absolute;
+				right: 0;
+				width: 1190px;
+			}
+		.content-slider{
+			.owl-item{
+				&.center{
+					.content-box{
+						color: $black;
+						transform: scale(1.08);
+						h2{
+							padding-bottom: 0;
+							&:after{
+								height: 0;
+							}
 						}
+					}
+				}	
+			}
+			.content-box{
+				text-align: center;
+				color: $white;
+				transition: all 0.3s ease 0s;
+				h2{
+					padding-bottom: 0;
+					&:after{
+						height: 0;
+					}
+				}
+			}
+		}
+		.slider-prev{
+			font-size: 50px;
+			left: 0;
+			margin-top: -20px;
+			position: absolute;
+			top: 50%;
+			z-index: 99;
+			cursor: pointer;
+		}
+		.slider-next{
+			position: absolute;
+			top: 50%;
+			right: 0;
+			font-size: 50px;
+			margin-top: -20px;
+			z-index: 99;
+			cursor: pointer;
+		}
+	}	
+}
+
+/***********  Common pages  ************/
+.page-wrapper{
+	.banner-image{
+		min-height: 220px;
+	}
+	.page-title{
+		text-align: center;
+		padding-top: 40px;
+		margin-bottom: -70px;
+	}
+	.page-content{
+		background: $white;
+		padding-top: 120px;
+	
+	.question-answer{
+			h4{
+				margin-bottom: 0;
+				line-height: 2;
+				cursor: pointer;
+				.plus{
+					float: right;
+					&:before{
+						content: "+";
+						font-family: $body-font;
+					}
+					&.minus{
+						&:before{
+							content: "-";
+						}
+					}
+				}
+			}
+			.answer{
+				padding: 10px 0;
+				display: none;
+			}
+		}
+	}
+	.content-box{
+		padding: 0 40px;
+	}
+	.featured{
+		padding: 100px 0;
+	}
+	.home-brand{
+		padding: 130px 0 20px;
+		&.contact-us{
+			.brand-image{
+				margin-right: -10px;
+			}
+			.content-box{
+				margin-left: -100px;
+				margin-right: 0;
+				padding: 40px 75px;
+			}
+		}
+	}
+	.contact-form{
+		.navbar-form{
+				padding: 0;
+				.form-group{
+					width: 100%;
+					.form-control{
+						width: 48.7% !important;
+						margin-bottom: 18px;
+						float: left;
+						&:nth-of-type(1){
+							margin-right: 2.6%;
+						}
+					}
+				}
+			.message{
+				textarea{
+					&.form-control{
+						width: 100% !important;
+						margin-bottom: 18px;
 					}
 				}
 			}	
 		}
-		.content-box{
-			text-align: center;
-			color: $white;
-			h2{
-				&:after{
-					height: 0;
-				}
-			}
-		}
 	}
 }
-
-
-
 
 
 /******************  Footer  ***************/
