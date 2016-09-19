@@ -59,12 +59,13 @@ h3{
 	font-family: $garamond;
 	font-size: 28px;
 	font-weight: $font-normal;
-	margin-bottom:  25px;
+	margin-bottom:  20px;
 	letter-spacing: 3px;
 	text-transform: capitalize;
 	span{
 		background: $white;
 		padding: 5px 20px;
+		display: inline-block;
 	}
 }
 h4{	
@@ -183,6 +184,7 @@ h6{
 	max-width: 1190px;
 	margin: 0 auto;
 	padding: 0 100px;
+	position: relative;
 }
 .col-centered{
 	float: none;
@@ -434,10 +436,11 @@ img{
 		&.contact-us{
 			.brand-image{
 				margin-right: -10px;
+				 margin-left: -220px;
 			}
 			.content-box{
 				margin-left: -100px;
-				margin-right: 0;
+				margin-right: 40px;
 				padding: 40px 75px;
 			}
 		}
@@ -467,10 +470,171 @@ img{
 		}
 	}
 }
+/**************  Services  **************/
+.services{
+	position: relative;
+	padding-bottom: 130px;
+	&:after{
+		background: $white;
+		bottom: 0;
+		content: "";
+		height: 2px;
+		left: 0;
+		margin: 0 auto;
+		position: absolute;
+		right: 0;
+		width: 1190px;
+		}
+		.first-row{
+			padding-top: 85px;
+		}	
+		.content-box{
+			background: $white;
+			padding: 40px 45px;
+			position: relative;
+			z-index: 1;
+			margin: 100px 60px 0 -100px;
+			text-align: center;
+			.description{
+				padding: 0 50px;
+			}
+		}
+		.service-image {
+			margin-left: -240px;
+			margin-right: 0;
+		}
+	
+	.second-row{
+		.content-box{
+			margin: -25px 0 0 -40px;
+		}
+		.service-image{
+			margin: 100px -120px 0 -100px;
+		}
+	}
+}
+/**************  Blog listing  ***************/
+.blog-listing{
+	padding: 45px 0 155px;
+	margin-left: -100px;
+	position: relative;
+	&:after{
+		background: $white;
+		bottom: 0;
+		content: "";
+		height: 2px;
+		left: 0;
+		margin: 0 auto;
+		position: absolute;
+		right: 0;
+		width: 1190px;
+		}
+	.blog-container{
+		padding: 45px 0;
+		.blog-image{
+			margin-left: 0;
+			margin-right: 50px;
+			img{
+				width: 100%;
+			}
+		}
+		.box-container{
+			display: flex;
+			align-items: center;
+			min-height: 430px;
+			.blog-content-box {
+				margin-left: -40px;
+				h3{
+					margin-left: -140px;
+				}
+				.content-box{
+					padding: 0;
+				}
+			}
+		}
+	}
+}
 
+/**************  Blog detail  ***************/
+.blog-detail{
+	padding-top: 145px;
+	.post-thumbnail{
+		position: relative;
+		.overlay-text{
+			position: absolute;
+			height: 100%;
+			top: 25%;
+			right: 100px;
+		}
+	}
+	.author-details{
+		padding-top: 45px;
+		span{
+			display: inline-block;
+			margin-right: 32px;
+			position: relative;
+			&:after{
+				content:"|";
+				position: absolute;
+				padding-left: 12px;
+			}
+			&:last-child{
+				&:after{
+					content: "";
+				}	
+			}
+		}
+	}
+	.blog-description{
+		padding: 45px 0;	
+	}
+	.tags-and-shares{
+		padding: 0 0 45px -100px;
+		margin-top: 45px;
+		.tags{
+			ul{
+				li{
+					display: inline-block;
+					margin-right: 32px;
+					position: relative;
+					&:after{
+						content:"|";
+						position: absolute;
+						padding-left: 12px;
+					}
+					&:last-child{
+						&:after{
+							content: "";
+						}	
+					}
+				}
+			}
+		}
+		.shares{
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+/*********  blackbars  ***********/
+.right-blackbar{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 15px;
+	background: #141e28;
+	height: 650px;
+}
+.left-blackbar{
+	@extend .right-blackbar;
+	left: 0;
+	width: 10px;
+}
 
 /******************  Footer  ***************/
 #footer{
+	padding-top: 20px;
 	text-align: center;
 	.follow-us{
 		h5{

@@ -60,13 +60,14 @@ h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: 28px;
   font-weight: normal;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   letter-spacing: 3px;
   text-transform: capitalize;
 }
 h3 span {
   background: #ffffff;
   padding: 5px 20px;
+  display: inline-block;
 }
 
 h4 {
@@ -187,6 +188,7 @@ h6 {
   max-width: 1190px;
   margin: 0 auto;
   padding: 0 100px;
+  position: relative;
 }
 
 .col-centered {
@@ -421,10 +423,11 @@ img {
 }
 .page-wrapper .home-brand.contact-us .brand-image {
   margin-right: -10px;
+  margin-left: -220px;
 }
 .page-wrapper .home-brand.contact-us .content-box {
   margin-left: -100px;
-  margin-right: 0;
+  margin-right: 40px;
   padding: 40px 75px;
 }
 .page-wrapper .contact-form .navbar-form {
@@ -446,8 +449,160 @@ img {
   margin-bottom: 18px;
 }
 
+/**************  Services  **************/
+.services {
+  position: relative;
+  padding-bottom: 130px;
+}
+.services:after {
+  background: #ffffff;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 1190px;
+}
+.services .first-row {
+  padding-top: 85px;
+}
+.services .content-box {
+  background: #ffffff;
+  padding: 40px 45px;
+  position: relative;
+  z-index: 1;
+  margin: 100px 60px 0 -100px;
+  text-align: center;
+}
+.services .content-box .description {
+  padding: 0 50px;
+}
+.services .service-image {
+  margin-left: -240px;
+  margin-right: 0;
+}
+.services .second-row .content-box {
+  margin: -25px 0 0 -40px;
+}
+.services .second-row .service-image {
+  margin: 100px -120px 0 -100px;
+}
+
+/**************  Blog listing  ***************/
+.blog-listing {
+  padding: 45px 0 155px;
+  margin-left: -100px;
+  position: relative;
+}
+.blog-listing:after {
+  background: #ffffff;
+  bottom: 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  width: 1190px;
+}
+.blog-listing .blog-container {
+  padding: 45px 0;
+}
+.blog-listing .blog-container .blog-image {
+  margin-left: 0;
+  margin-right: 50px;
+}
+.blog-listing .blog-container .blog-image img {
+  width: 100%;
+}
+.blog-listing .blog-container .box-container {
+  display: flex;
+  align-items: center;
+  min-height: 430px;
+}
+.blog-listing .blog-container .box-container .blog-content-box {
+  margin-left: -40px;
+}
+.blog-listing .blog-container .box-container .blog-content-box h3 {
+  margin-left: -140px;
+}
+.blog-listing .blog-container .box-container .blog-content-box .content-box {
+  padding: 0;
+}
+
+/**************  Blog detail  ***************/
+.blog-detail {
+  padding-top: 145px;
+}
+.blog-detail .post-thumbnail {
+  position: relative;
+}
+.blog-detail .post-thumbnail .overlay-text {
+  position: absolute;
+  height: 100%;
+  top: 25%;
+  right: 100px;
+}
+.blog-detail .author-details {
+  padding-top: 45px;
+}
+.blog-detail .author-details span {
+  display: inline-block;
+  margin-right: 32px;
+  position: relative;
+}
+.blog-detail .author-details span:after {
+  content: "|";
+  position: absolute;
+  padding-left: 12px;
+}
+.blog-detail .author-details span:last-child:after {
+  content: "";
+}
+.blog-detail .blog-description {
+  padding: 45px 0;
+}
+.blog-detail .tags-and-shares {
+  padding: 0 0 45px -100px;
+  margin-top: 45px;
+}
+.blog-detail .tags-and-shares .tags ul li {
+  display: inline-block;
+  margin-right: 32px;
+  position: relative;
+}
+.blog-detail .tags-and-shares .tags ul li:after {
+  content: "|";
+  position: absolute;
+  padding-left: 12px;
+}
+.blog-detail .tags-and-shares .tags ul li:last-child:after {
+  content: "";
+}
+.blog-detail .tags-and-shares .shares {
+  text-transform: uppercase;
+}
+
+/*********  blackbars  ***********/
+.right-blackbar, .left-blackbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+  background: #141e28;
+  height: 650px;
+}
+
+.left-blackbar {
+  left: 0;
+  width: 10px;
+}
+
 /******************  Footer  ***************/
 #footer {
+  padding-top: 20px;
   text-align: center;
 }
 #footer .follow-us h5 {
