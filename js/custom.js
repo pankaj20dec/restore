@@ -1,10 +1,12 @@
-var wheight,restore;
+var wheight,restore,Width;
 	restore = {
 		sizes: function(){
 			wheight = $(window).height();
+			wWidth = $(window).width();
 			$('.wheight').css({'height': wheight});
 			var hWidth = $('#header').outerWidth();
 			var offset = $('#header').offset();
+		
 			$('.banner-width').css({'width': hWidth + offset.left - 100});
 			
 			var sliderWidth = $('.owl-item').outerWidth();
@@ -82,7 +84,8 @@ var wheight,restore;
 						items:2
 					},
 					768:{
-						items:2
+						items:2,
+						margin: 120,
 					},
 					1000:{
 						items: 2
@@ -114,6 +117,9 @@ var wheight,restore;
 		
 		if( $('.content-slider .content-box').length > 1){
 			restore.carousel('.content-slider');
+		}
+		if( $('.testimonial-slider .content-box').length > 1){
+			restore.carousel('.testimonial-slider');
 		}
 		if($('.blog-slider li').length > 1){
 			restore.slider('.blog-slider',false);

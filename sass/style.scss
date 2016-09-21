@@ -193,6 +193,18 @@ h6{
 img{
 	max-width: 100%;
 }
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: black !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: black;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: black;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
 /**********  Header ***********/
 #header{
 	max-width: 1190px;
@@ -250,6 +262,9 @@ img{
 .main-container{
 	.home-banner{
 		position: relative;
+			.container{
+				position: static;
+			}
 		.banner-image{
 			min-height: 580px;
 			background-size: cover !important;
@@ -314,7 +329,7 @@ img{
 				margin: 0 auto;
 				position: absolute;
 				right: 0;
-				width: 1190px;
+				max-width: 1190px;
 			}
 		.featured-contaner{
 			min-height: 520px;
@@ -337,7 +352,7 @@ img{
 				margin: 0 auto;
 				position: absolute;
 				right: 0;
-				width: 1190px;
+				max-width: 1190px;
 			}
 		.content-slider{
 			.owl-item{
@@ -386,7 +401,9 @@ img{
 		}
 	}	
 }
-
+.testimonial-slider{
+	@extend .content-slider;
+}
 /***********  Common pages  ************/
 .page-wrapper{
 	.banner-image{
@@ -483,7 +500,7 @@ img{
 		margin: 0 auto;
 		position: absolute;
 		right: 0;
-		width: 1190px;
+		max-width: 1190px;
 		}
 		.first-row{
 			padding-top: 85px;
@@ -497,6 +514,8 @@ img{
 			text-align: center;
 			.description{
 				padding: 0 50px;
+				height: 180px;
+				overflow: hidden;
 			}
 		}
 		.service-image {
@@ -527,7 +546,7 @@ img{
 		margin: 0 auto;
 		position: absolute;
 		right: 0;
-		width: 1190px;
+		max-width: 1190px;
 		}
 	.blog-container{
 		padding: 45px 0;
@@ -690,6 +709,10 @@ img{
 		padding: 50px 0;
 		.navbar-form{
 			margin-top: 25px;
+		}
+		.subscribe {
+			margin: 0 auto;
+			max-width: 650px;
 		}
 	}
 	.footer-menus{

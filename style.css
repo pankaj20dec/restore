@@ -200,6 +200,26 @@ img {
   max-width: 100%;
 }
 
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: black !important;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: black;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: black;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: black;
+}
+
 /**********  Header ***********/
 #header {
   max-width: 1190px;
@@ -252,6 +272,9 @@ img {
 /************** Main Container *****************/
 .main-container .home-banner {
   position: relative;
+}
+.main-container .home-banner .container {
+  position: static;
 }
 .main-container .home-banner .banner-image {
   min-height: 580px;
@@ -315,7 +338,7 @@ img {
   margin: 0 auto;
   position: absolute;
   right: 0;
-  width: 1190px;
+  max-width: 1190px;
 }
 .main-container .featured .featured-contaner {
   min-height: 520px;
@@ -338,27 +361,27 @@ img {
   margin: 0 auto;
   position: absolute;
   right: 0;
-  width: 1190px;
+  max-width: 1190px;
 }
-.main-container .slider-container .content-slider .owl-item.center .content-box {
+.main-container .slider-container .content-slider .owl-item.center .content-box, .main-container .slider-container .testimonial-slider .owl-item.center .content-box {
   color: #000000;
   transform: scale(1.08);
 }
-.main-container .slider-container .content-slider .owl-item.center .content-box h2 {
+.main-container .slider-container .content-slider .owl-item.center .content-box h2, .main-container .slider-container .testimonial-slider .owl-item.center .content-box h2 {
   padding-bottom: 0;
 }
-.main-container .slider-container .content-slider .owl-item.center .content-box h2:after {
+.main-container .slider-container .content-slider .owl-item.center .content-box h2:after, .main-container .slider-container .testimonial-slider .owl-item.center .content-box h2:after {
   height: 0;
 }
-.main-container .slider-container .content-slider .content-box {
+.main-container .slider-container .content-slider .content-box, .main-container .slider-container .testimonial-slider .content-box {
   text-align: center;
   color: #ffffff;
   transition: all 0.3s ease 0s;
 }
-.main-container .slider-container .content-slider .content-box h2 {
+.main-container .slider-container .content-slider .content-box h2, .main-container .slider-container .testimonial-slider .content-box h2 {
   padding-bottom: 0;
 }
-.main-container .slider-container .content-slider .content-box h2:after {
+.main-container .slider-container .content-slider .content-box h2:after, .main-container .slider-container .testimonial-slider .content-box h2:after {
   height: 0;
 }
 .main-container .slider-container .slider-prev {
@@ -463,7 +486,7 @@ img {
   margin: 0 auto;
   position: absolute;
   right: 0;
-  width: 1190px;
+  max-width: 1190px;
 }
 .services .first-row {
   padding-top: 85px;
@@ -478,6 +501,8 @@ img {
 }
 .services .content-box .description {
   padding: 0 50px;
+  height: 180px;
+  overflow: hidden;
 }
 .services .service-image {
   margin-left: -240px;
@@ -505,7 +530,7 @@ img {
   margin: 0 auto;
   position: absolute;
   right: 0;
-  width: 1190px;
+  max-width: 1190px;
 }
 .blog-listing .blog-container {
   padding: 45px 0;
@@ -656,6 +681,10 @@ img {
 }
 #footer .subscribe-container .navbar-form {
   margin-top: 25px;
+}
+#footer .subscribe-container .subscribe {
+  margin: 0 auto;
+  max-width: 650px;
 }
 #footer .footer-menus {
   line-height: 80px;

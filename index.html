@@ -21,7 +21,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					  </button>
-					   <!-- <a class="navbar-brand" href="#">Restore</a> -->
+					   <a class="navbar-brand" href="/restore-sliceup/"><img src="images/logo.png" alt="Restore" /></a>
 				</div>
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<nav class="navigation">
@@ -33,14 +33,12 @@
 							<li><a href="contact.html">CONTACT</a></li>
 						</ul>
 					</nav>
-					<div class="mobile-top-bar" style="display: none">
-						<div class="social-icons">
-							<ul>
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-							</ul>
-						</div>
+					<div class="mobile-social-icons">
+						<ul>
+							<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -58,6 +56,10 @@
 		
 	</header>
 	<div class="main-container clearfix">
+		<div class="right-blackbar mobile"></div>
+		<div class="container mobile">
+			<div class="left-blackbar"></div>
+		</div>
 		<section class="home-banner">
 			<div class="banner-width banner-image" style="background:url('images/home-banner.jpg') no-repeat;">	</div>
 				<div class="container">
@@ -70,17 +72,17 @@
 		<section class="home-brand common-space">
 			<div class="container">
 				<div class="row clearfix">
-					<div class="col-md-6">
+					<div class="col-md-6 col-xs-12 pull-right">
+						<div class="brand-image">
+							<img src="images/brand-img.jpg" alt="Brand image" />
+						</div>
+					</div>
+					<div class="col-md-6 col-xs-12 pull-left">
 						<div class="content-box">
 							<h1>here is a leading heading about the brand</h1>
 							<div class="description">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. quaerat voluptatem.</p>
 							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="brand-image">
-							<img src="images/brand-img.jpg" alt="Brand image" />
 						</div>
 					</div>
 				</div>
@@ -96,21 +98,21 @@
 				</div>
 				<div class="home-services-content">
 					<div class="row clearfix">
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<h4>Service One</h4>
 							<div class="services-box">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. quaerat voluptatem.</p>
 								<a href="#" class="link-button">See more </a>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<h4>Service two</h4>
 							<div class="services-box">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. quaerat voluptatem.</p>
 								<a href="#" class="link-button">See more </a>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-md-4 col-sm-4">
 							<h4>Service three</h4>
 							<div class="services-box">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. quaerat voluptatem.</p>
@@ -124,12 +126,12 @@
 		<section class="featured common-space">
 			<div class="container">
 				<div class="row clearfix">
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6">
 						<div class="image">
 							<img src="images/book-now-img.jpg" alt="Featured image" />
 						</div>
 					</div>	
-					<div class="col-md-6">
+					<div class="col-md-6 col-sm-6">
 						<div class="featured-contaner flex-container">
 							<div>
 								<div class="featured-content">
@@ -189,25 +191,19 @@
 			</div>
 		</div>
 		<div class="subscribe-container">
-			<div class="container">
-				<div class="row clearfix">
-					<div class="col-md-8 col-centered">
-						<div class="subscribe">
-							<div class="subscribe-form">
-								<h5>JOIN OUR MAILING LIST!</h5>
-								<p>Keep up-to-date with what’s going on at the clinic, new promotions and lots more!</p>
-								<form class="navbar-form">
-									  <div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
-											<input type="email" class="form-control" placeholder="Email">
-									  </div>
-									<button type="submit" class="btn btn-default pull-right">submit</button>
-								</form>
-							</div>
-						</div>
-					</div>
+			<div class="subscribe">
+				<div class="subscribe-form">
+					<h5>JOIN OUR MAILING LIST!</h5>
+					<p>Keep up-to-date with what’s going on at the clinic, new promotions and lots more!</p>
+					<form class="navbar-form">
+						  <div class="form-group">
+								<input type="text" class="form-control" placeholder="Name">
+								<input type="email" class="form-control" placeholder="Email">
+						  </div>
+						<button type="submit" class="btn btn-default pull-right">submit</button>
+					</form>
 				</div>
-			</div>	
+			</div>
 		</div> 
 		<div class="container">
 			<div class="footer-menus">
