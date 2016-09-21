@@ -6,9 +6,9 @@ var wheight,restore,Width;
 			$('.wheight').css({'height': wheight});
 			var hWidth = $('#header').outerWidth();
 			var offset = $('#header').offset();
-		
-			$('.banner-width').css({'width': hWidth + offset.left - 100});
-			
+			if(wWidth > 767){
+				$('.banner-width').css({'width': hWidth + offset.left - 100});
+			}
 			var sliderWidth = $('.owl-item').outerWidth();
 			$('.slider-margin-left').css({'marginLeft': sliderWidth/2});
 			$('.slider-margin-right').css({'marginRight': sliderWidth/2});
